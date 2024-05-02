@@ -1,0 +1,145 @@
+/* General Body and Font Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, legible font */
+    background-color: #f9f9f9; /* Soft, neutral background color */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark grey for text for better readability */
+}
+
+/* Header Styling */
+.header {
+    background-color: #f2f7f5f5; /* Professional white */
+    color: white;
+    text-align: center;
+    padding: 20px 15;
+}
+
+
+.secondary-header {
+    background-color: rgb(235, 23, 23);   /* Red background */
+    color: white;            /* White text */
+    text-align: center;      /* Center the text */
+    padding: 3px;           /* Padding for better spacing */
+}
+
+
+.logo {
+    width: 180px; /* Appropriate size for logo */
+}
+
+/* Main Form Container Styling */
+.form-container {
+    background-color: #ffffff; /* Pure white background */
+    width: 95%; /* Adjusted for better desktop appearance */
+    max-width: 500px; /* Maximum width for larger devices */
+    margin: 20px auto; /* More vertical space */
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Softer shadow */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Form Element Styling */
+form {
+    display: block;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px; /* Smaller font size for mobile */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+input[type="tel"], /* Added telephone input type */
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 16px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Smooth transition for focus */
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #00457c; /* Focus color */
+}
+
+input[list] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 16px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Smooth transition for focus */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Ensure font consistency */
+}
+
+input[list]:focus {
+    border-color: #00457c; /* Focus color, similar to other inputs */
+}
+
+/* Button Styling Enhancements */
+button {
+    background-color: #b32a00; /* Brighter Red */
+    color: white;
+    padding: 10px 15px; /* Adjusted padding for mobile */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /*float: right; */
+    transition: background-color 0.3s; /* Smooth background transition on hover */
+}
+
+button:hover {
+    background-color: #003d80; /* Darker shade on hover */
+}
+
+/* Utility for clearing floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* Footer Styling */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    color: white;
+    padding: 1vh 0; /* Using viewport height unit for padding */
+    font-size: calc(1em + 0.5vw); /* Responsive font size */
+}
+
+.footer-image {
+    width: 100%; /* Ensures the image stretches to the width of the screen */
+    height: auto; /* Keeps the aspect ratio of the image */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .header, .secondary-header {
+        text-align: center; /* Center text for better mobile readability */
+    }
+
+    .form-container, button {
+        width: 90%; /* More suitable for smaller screens */
+    }
+}
+

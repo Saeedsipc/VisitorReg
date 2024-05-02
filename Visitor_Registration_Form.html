@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Registration Form</title>
+    <link rel="stylesheet" href="Visitor_Registration_Styles.css">
+    <style>
+        body, .main-content {
+            padding-bottom: 5vh; /* Adjust based on the actual height of the footer */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="Picture1forVMS.png" alt="Company Logo" class="logo">
+    </header>
+
+
+  <!-- <header class="secondary-header">
+        <h2>Visitor Registration</h2>
+    </header> 
+-->
+
+
+    <main class="form-container">
+        <h2>Visitor Registration</h2>
+        <form id="visitorForm" onsubmit="handleFormSubmission(event)">
+
+            <label for="visitorType">Type of Visitor:</label>
+            <select id="visitorType" name="visitType" onchange="updateFormFields()" required>
+                <option value="" disabled selected>Type of visit</option>
+                <option value="Individual">Individual</option>
+                <option value="Group">Group</option>
+            </select>
+
+            <div id="visitorFields">
+                <div id="groupNames">
+                    <input type="text" id="name1" name="name1" placeholder="Name">
+                </div>
+                <button type="button" id="addNameButton" style="display:none;" onclick="addGroupMember()">Add Another Visitor</button>
+                
+
+                 <!-- New phone number field -->
+                 <label for="phone">Phone Number:</label>
+                 <input type="tel" id="phone" name="phone" placeholder="Enter phone number" pattern="[0-9]{8}" title="Enter a 10-digit phone number without any dashes or spaces" class="form-input">
+
+
+                <!-- New company name field -->
+                   <label for="company">Company Name:</label>
+                      <input type="text" id="company" name="company" placeholder="Enter company name">
+
+
+                      
+                      <label for="whom">Visiting:</label>
+                      <input list="nameList" id="whom" name="whom" placeholder="Select or type name" class="form-input">
+                <datalist id="nameList">
+                    <!-- Dynamically populated names from the list -->
+                    <option value="Batti Abdullah Mohammed Al-Shibli"></option>
+                    <option value="Ahmed Ali Obaid AlNofli"></option>
+                    <option value="Hashim Mohammed Murad Al Balushi"></option>
+                    <option value="Kamel Salim Mubarak Al Zadjali"></option>
+                    <option value="Ahmed Abdullah Mohammed Al Mamari"></option>
+                    <!-- Additional names -->
+                    <!-- Due to space limitations, not all names are listed here. Ensure all names are included in the actual implementation. -->
+                </datalist>
+
+
+               
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time">
+            </div>
+            
+            <footer class="footer">
+                <img src="Bottom Footer.png" alt="Footer" class="footer-image">
+            </footer>
+            
+            <button type="submit">Register</button>
+        </form>
+    </main>
+    <script src="Visitor_Registration_Script.js"></script>
+</body>
+</html>
